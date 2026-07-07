@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Điểm Tiếp Nhận Hồ Sơ Học Lái Xe Ô Tô Vĩnh Phúc | Học Lái Xe Vĩnh Phúc, Phú Thọ</title>
+<meta name="description" content="Văn phòng tiếp nhận hồ sơ học lái xe ô tô Vĩnh Phúc - dạy lái xe hạng B, C1 cùng Thầy Thụy. Tuyển sinh học lái xe Vĩnh Phúc, Phú Thọ, đăng ký online nhanh gọn, học phí minh bạch.">
+<meta name="keywords" content="học lái xe, học bằng lái ô tô, học lái xe vĩnh phúc, học lái xe phú thọ, dạy lái xe vĩnh phúc, dạy lái xe">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue-deep:#0B3D91;
+    --blue-primary:#1565C0;
+    --blue-light:#EAF2FC;
+    --blue-hair:#C9DCF5;
+    --white:#FFFFFF;
+    --ink:#122036;
+    --gray:#5B6B82;
+    --radius:14px;
+    --maxw:1160px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Be Vietnam Pro', 'Segoe UI', Arial, sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+
+  /* ---------- Road-line divider (signature element) ---------- */
+  .road-divider{
+    height:6px;
+    margin:0 auto;
+    width:100%;
+    background-image:repeating-linear-gradient(90deg, var(--blue-primary) 0 28px, transparent 28px 46px);
+    opacity:.55;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:saturate(180%) blur(8px);
+    border-bottom:1px solid var(--blue-hair);
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 24px; max-width:var(--maxw); margin:0 auto;
+  }
+  .brand{
+    display:flex; align-items:center; gap:10px;
+    font-weight:800; font-size:1.05rem; color:var(--blue-deep);
+  }
+  .brand-badge{
+    width:38px;height:38px;border-radius:10px;
+    background:var(--blue-primary); color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.2rem; flex-shrink:0;
+  }
+  .brand small{display:block;font-weight:500;font-size:.72rem;color:var(--gray);}
+  .nav-cta{
+    display:flex; gap:10px; align-items:center;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:10px 18px; border-radius:999px;
+    font-weight:600; font-size:.92rem;
+    border:1.5px solid var(--blue-primary);
+    white-space:nowrap;
+    transition:transform .15s ease, background .2s ease, color .2s ease;
+  }
+  .btn-solid{ background:var(--blue-primary); color:#fff; }
+  .btn-solid:hover{ background:var(--blue-deep); border-color:var(--blue-deep); }
+  .btn-ghost{ background:transparent; color:var(--blue-primary); }
+  .btn-ghost:hover{ background:var(--blue-light); }
+  .btn:active{ transform:scale(.97); }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:linear-gradient(180deg, var(--blue-light) 0%, #fff 100%);
+    padding:56px 0 48px;
+  }
+  .hero-inner{
+    display:grid; grid-template-columns:1.1fr .9fr; gap:40px; align-items:center;
+  }
+  .eyebrow{
+    display:inline-block; font-size:clamp(.62rem, 2.1vw, .8rem); font-weight:700; letter-spacing:.02em;
+    color:var(--blue-primary); background:#fff; border:1px solid var(--blue-hair);
+    padding:6px 14px; border-radius:999px; margin-bottom:18px;
+    white-space:nowrap; max-width:100%; overflow:hidden; text-overflow:ellipsis;
+  }
+  .h1-title{
+    font-size:clamp(1.5rem, 4.6vw, 2.35rem); font-weight:800; color:var(--blue-deep); line-height:1.22;
+    letter-spacing:-.01em;
+  }
+  .h1-tagline{
+    margin-top:8px;
+    font-size:clamp(.92rem, 3vw, 1.2rem); font-weight:700; color:var(--blue-primary);
+    white-space:nowrap; letter-spacing:-.005em;
+  }
+  .hero p.lead{
+    margin-top:16px; font-size:1.05rem; color:var(--gray); max-width:52ch;
+  }
+  .hero-actions{ margin-top:28px; display:flex; gap:14px; flex-wrap:wrap; justify-content:center; }
+  .hero-photo{
+    border-radius:var(--radius); overflow:hidden; border:1px solid var(--blue-hair);
+    background:var(--blue-light);
+  }
+  .hero-photo img{ width:100%; height:100%; object-fit:cover; aspect-ratio:4/5; }
+
+  .stat-row{
+    display:flex; gap:28px; margin-top:32px; flex-wrap:wrap; justify-content:center; text-align:center;
+  }
+  .stat{ display:flex; flex-direction:column; align-items:center; }
+  .stat b{ display:block; font-size:1.5rem; color:var(--blue-deep); font-weight:800;}
+  .stat span{ font-size:.85rem; color:var(--gray); }
+
+  /* ---------- Section generic ---------- */
+  section{ padding:64px 0; }
+  .section-head{ max-width:640px; margin-bottom:40px; }
+  .section-head.wide{ max-width:840px; }
+  .section-head .eyebrow{ margin-bottom:14px; }
+  h2{ font-size:1.7rem; font-weight:800; color:var(--blue-deep); letter-spacing:-.01em;}
+  .section-head p{ color:var(--gray); margin-top:10px; }
+  .alt-bg{ background:var(--blue-light); }
+  .nowrap-phrase{ white-space:nowrap; }
+  .h2-compact{ font-size:clamp(1.15rem, 2.6vw, 1.45rem); }
+  @media (min-width:901px){
+    .section-head.wide .section-caption,
+    .section-head.wide .section-caption-head{ white-space:nowrap; }
+    .section-head.wide .section-caption-head{ font-size:clamp(1.2rem, 2.1vw, 1.6rem); }
+  }
+
+  /* ---------- Courses ---------- */
+  .grid-3{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  .card{
+    background:#fff; border:1px solid var(--blue-hair); border-radius:var(--radius);
+    padding:26px 24px; transition:box-shadow .2s ease, transform .2s ease;
+  }
+  .card:hover{ box-shadow:0 12px 28px -14px rgba(11,61,145,.35); transform:translateY(-3px); }
+  .card .tag{
+    display:inline-block; font-size:.72rem; font-weight:700; color:var(--blue-primary);
+    background:var(--blue-light); padding:4px 10px; border-radius:6px; margin-bottom:14px;
+  }
+  .card h3{ font-size:1.15rem; font-weight:700; color:var(--ink); margin-bottom:8px; }
+  .card p{ color:var(--gray); font-size:.94rem; }
+  .card .dist{ margin-top:14px; font-weight:700; color:var(--blue-deep); font-size:.95rem; }
+  .card.featured{ border-color:var(--blue-primary); position:relative; }
+  .card.featured::before{
+    content:"Được chọn nhiều nhất"; position:absolute; top:-12px; left:24px;
+    background:var(--blue-primary); color:#fff; font-size:.7rem; font-weight:700;
+    padding:5px 12px; border-radius:999px;
+  }
+
+  /* ---------- Why choose ---------- */
+  .grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+  .feature{
+    display:flex; gap:16px; padding:22px; background:#fff;
+    border:1px solid var(--blue-hair); border-radius:var(--radius);
+  }
+  .feature-icon{
+    width:44px;height:44px;border-radius:10px; flex-shrink:0;
+    background:var(--blue-deep); color:#fff; display:flex; align-items:center; justify-content:center;
+    font-weight:800;
+  }
+  .feature h3{ font-size:1.02rem; font-weight:700; margin-bottom:4px; color:var(--ink); }
+  .feature p{ font-size:.92rem; color:var(--gray); }
+
+  /* ---------- Steps ---------- */
+  .steps{ display:grid; grid-template-columns:repeat(2,1fr); gap:22px; }
+  .step{
+    background:#fff; border:1px solid var(--blue-hair); border-radius:var(--radius);
+    padding:26px; position:relative; padding-top:52px;
+  }
+  .step .num{
+    position:absolute; top:-18px; left:24px;
+    width:40px;height:40px;border-radius:50%;
+    background:var(--blue-primary); color:#fff; font-weight:800;
+    display:flex; align-items:center; justify-content:center; font-size:1rem;
+  }
+  .step h3{ font-size:1.02rem; font-weight:700; margin-bottom:6px; color:var(--ink); }
+  .step p{ font-size:.93rem; color:var(--gray); }
+  .step-note{
+    margin-top:18px; padding:16px 18px; background:var(--blue-light);
+    border-radius:10px; font-size:.9rem; color:var(--blue-deep); font-weight:600;
+  }
+
+  /* ---------- Locations ---------- */
+  .loc-grid{ display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+  .loc-card{
+    border:1px solid var(--blue-hair); border-radius:var(--radius); padding:24px;
+    background:#fff;
+  }
+  .loc-card .badge{
+    display:inline-block; background:var(--blue-deep); color:#fff; font-size:.72rem;
+    font-weight:700; padding:4px 10px; border-radius:6px; margin-bottom:12px;
+  }
+  .loc-card h3{ font-size:1.08rem; font-weight:700; margin-bottom:6px; }
+  .loc-card p{ color:var(--gray); font-size:.94rem; }
+
+  /* ---------- Gallery: đội ngũ giảng dạy (2 ảnh) ---------- */
+  .team-row{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:14px;
+    max-width:520px;
+    margin:0 auto 28px;
+  }
+  .team-item{
+    aspect-ratio:3/4;
+    position:relative;
+  }
+  .team-item img{ object-fit:cover; }
+  .gallery-name{
+    position:absolute; left:0; right:0; bottom:0;
+    background:linear-gradient(0deg, rgba(11,61,145,.88) 0%, rgba(11,61,145,0) 100%);
+    color:#fff; font-size:clamp(.72rem, 2.6vw, .85rem); font-weight:700;
+    padding:22px 10px 12px; text-align:center; line-height:1.3;
+    white-space:nowrap;
+  }
+  .gallery-name small{
+    display:block; font-weight:500; font-size:clamp(.56rem, 2vw, .68rem);
+    opacity:.9; margin-top:3px; white-space:nowrap;
+  }
+
+  /* ---------- Gallery: hình ảnh thực tế (3 ảnh cùng kích cỡ) ---------- */
+  .gallery-row{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:14px;
+  }
+  .gallery-item{
+    border:1px solid var(--blue-hair);
+    border-radius:10px;
+    overflow:hidden;
+    background:#fff;
+  }
+  .gallery-row .gallery-item{ aspect-ratio:4/3; }
+  .gallery-item img{
+    width:100%; height:100%;
+    object-fit:cover;
+  }
+
+  /* ---------- Video row riêng (giữ định dạng ngang) ---------- */
+  .video-row{ margin-top:36px; }
+  .video-frame{
+    border:1px solid var(--blue-hair); border-radius:var(--radius);
+    overflow:hidden; background:#000;
+    max-width:720px; margin:0 auto;
+  }
+  .video-frame video{ width:100%; display:block; aspect-ratio:16/9; object-fit:contain; background:#000; }
+  .video-caption{ text-align:center; color:var(--gray); font-size:.9rem; margin-top:12px; }
+
+  /* ---------- Contact ---------- */
+  .contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+  .contact-card{
+    background:var(--blue-deep); color:#fff; border-radius:var(--radius);
+    padding:28px;
+  }
+  .contact-card.light{ background:#fff; color:var(--ink); border:1px solid var(--blue-hair); }
+  .contact-card .role{ font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; opacity:.8; margin-bottom:8px;}
+  .contact-card.light .role{ color:var(--blue-primary); opacity:1; }
+  .contact-card h3{ font-size:1.2rem; font-weight:800; margin-bottom:14px; }
+  .contact-card .phone-line{
+    display:flex; align-items:center; gap:10px; margin-bottom:10px;
+    font-weight:700; font-size:1.02rem;
+  }
+  .contact-card .phone-line a{ text-decoration:underline; text-underline-offset:3px; }
+
+  /* ---------- Footer ---------- */
+  footer{ background:var(--blue-deep); color:#fff; padding:36px 0; }
+  .footer-inner{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;
+  }
+  footer p{ font-size:.85rem; opacity:.85; }
+
+  /* ---------- Sticky call bar (mobile) ---------- */
+  .mobile-call-bar{
+    display:none;
+    position:fixed; bottom:0; left:0; right:0; z-index:60;
+    background:#fff; border-top:1px solid var(--blue-hair);
+    padding:10px 16px; gap:10px;
+  }
+  .mobile-call-bar .btn{ flex:1; justify-content:center; }
+
+  /* ---------- Mobile nav ---------- */
+  .menu-toggle{ display:none; }
+
+  /* =========================================================
+     RESPONSIVE
+     ========================================================= */
+  @media (max-width: 900px){
+    .hero-inner{ grid-template-columns:1fr; }
+    .hero-photo img{ aspect-ratio:16/10; }
+    .grid-3{ grid-template-columns:1fr; }
+    .grid-2{ grid-template-columns:1fr; }
+    .steps{ grid-template-columns:1fr; }
+    .loc-grid{ grid-template-columns:1fr; }
+    .contact-grid{ grid-template-columns:1fr; }
+  }
+
+  @media (max-width: 560px){
+    h2{ font-size:1.4rem; }
+    section{ padding:44px 0; }
+    .nav-cta .btn span.txt{ display:none; }
+    .gallery-row{ gap:8px; }
+    .team-row{ gap:8px; max-width:100%; }
+    .gallery-name{ padding:16px 6px 8px; }
+    .video-frame{ max-width:100%; }
+    .mobile-call-bar{ display:flex; }
+    body{ padding-bottom:64px; }
+    .stat-row{ gap:20px; }
+    .hero-actions{ flex-wrap:nowrap; gap:8px; }
+    .hero-actions .btn{ flex:1; justify-content:center; padding:10px 8px; font-size:.8rem; white-space:nowrap; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="brand-badge">🚘</div>
+      <div>
+        Điểm Tiếp Nhận Hồ Sơ<br>
+        <small>Học Lái Xe Ô Tô Vĩnh Phúc</small>
+      </div>
+    </div>
+    <div class="nav-cta">
+      <a class="btn btn-solid" href="tel:0987453423">📞 <span class="txt">Gọi ngay</span></a>
+    </div>
+  </div>
+</header>
+<div class="road-divider"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow">TUYỂN SINH LIÊN TỤC · HỌC LÁI XE VĨNH PHÚC</span>
+      <h1 class="h1-title">Học lái xe ô tô tại Vĩnh Phúc</h1>
+      <p class="h1-tagline">Học thật – Thi thật – Vững tay lái</p>
+      <p class="lead">Văn phòng tiếp nhận hồ sơ và tư vấn khóa học lái xe ô tô hạng B, C1 cùng Thầy Thụy. Phục vụ học viên tại Vĩnh Phúc, Phú Thọ và khu vực lân cận, đăng ký online nhanh gọn, học phí minh bạch.</p>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="tel:0987453423">📞 Gọi tiếp nhận hồ sơ</a>
+        <a class="btn btn-ghost" href="https://zalo.me/0912599550" target="_blank" rel="noopener">💬 Nhắn Zalo tư vấn</a>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><b>3</b><span>Hạng bằng đào tạo</span></div>
+        <div class="stat"><b>2</b><span>Cơ sở tại Vĩnh Phúc</span></div>
+        <div class="stat"><b>7/7</b><span>Ngày trong tuần, kể cả Lễ</span></div>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="708345716_1534663821472766_7735529216957334704_n.jpg" alt="Sân sát hạch lái xe ô tô Vĩnh Phúc">
+    </div>
+  </div>
+</section>
+
+<!-- KHOÁ HỌC -->
+<section id="khoa-hoc">
+  <div class="wrap">
+    <div class="section-head wide">
+      <span class="eyebrow">KHÓA HỌC</span>
+      <h2>Các khóa học bằng lái ô tô đang tuyển sinh</h2>
+      <p class="section-caption">Lựa chọn hạng bằng phù hợp với nhu cầu đi lại và định hướng công việc của anh/chị.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <span class="tag">HẠNG B · SỐ TỰ ĐỘNG</span>
+        <h3>Bằng lái xe hạng B (số tự động)</h3>
+        <p>Phù hợp với người mới bắt đầu, thao tác đơn giản, dễ làm quen, phù hợp lái xe gia đình hằng ngày.</p>
+        <div class="dist">Quãng đường thực hành: 710km</div>
+      </div>
+      <div class="card">
+        <span class="tag">HẠNG B · SỐ SÀN</span>
+        <h3>Bằng lái xe hạng B (số sàn)</h3>
+        <p>Lái được xe con đến 9 chỗ ngồi, chủ động xử lý tình huống, phù hợp người muốn nắm vững kỹ năng lái xe số sàn.</p>
+        <div class="dist">Quãng đường thực hành: 810km</div>
+      </div>
+      <div class="card featured">
+        <span class="tag">HẠNG C1</span>
+        <h3>Bằng lái xe hạng C1</h3>
+        <p>Hạng bằng được nhiều học viên lựa chọn nhất, mở rộng cơ hội nghề nghiệp đa dạng với xe tải, xe chuyên dụng.</p>
+        <div class="dist">Quãng đường thực hành: 825km</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VÌ SAO CHỌN -->
+<section class="alt-bg" id="vi-sao">
+  <div class="wrap">
+    <div class="section-head wide">
+      <span class="eyebrow">VÌ SAO CHỌN HỌC CÙNG THẦY THỤY</span>
+      <h2 class="section-caption-head">Dạy lái xe Vĩnh Phúc uy tín, đồng hành cùng học viên đến khi có bằng</h2>
+    </div>
+    <div class="grid-2">
+      <div class="feature">
+        <div class="feature-icon">1</div>
+        <div>
+          <h3>Chất lượng đào tạo thực tế</h3>
+          <p>Học viên được cầm lái trải nghiệm trên nhiều cung đường khác nhau, từ nông thôn đến thành thị, tự tin lái xe ngay sau khi ra bằng.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">2</div>
+        <div>
+          <h3>Giáo viên tận tâm</h3>
+          <p>Thầy Thụy trực tiếp giảng dạy, nhiệt tình và chu đáo. Lộ trình học 1 kèm 1 giúp học viên dễ học, dễ hiểu.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">3</div>
+        <div>
+          <h3>Thời gian linh hoạt</h3>
+          <p>Linh động lịch học tất cả các ngày, kể cả Thứ 7, Chủ Nhật và ngày Lễ.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">4</div>
+        <div>
+          <h3>Chi phí rõ ràng</h3>
+          <p>Học phí công khai, minh bạch ngay từ đầu, cam kết không phát sinh trong suốt quá trình học.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ĐĂNG KÝ ONLINE -->
+<section id="dang-ky">
+  <div class="wrap">
+    <div class="section-head wide">
+      <span class="eyebrow">ĐĂNG KÝ ONLINE</span>
+      <h2>Đăng ký học lái xe online nhanh gọn</h2>
+      <p class="section-caption">Chỉ với 2 bước đơn giản, anh/chị đã có thể hoàn tất hồ sơ mà không cần đi lại nhiều.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">01</div>
+        <h3>Gửi ảnh hồ sơ qua Zalo</h3>
+        <p>Chụp ảnh Căn cước công dân (2 mặt) và ảnh thẻ rõ nét, gửi qua Zalo cho văn phòng tiếp nhận hồ sơ.</p>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h3>Xác nhận học phí</h3>
+        <p>Sau khi chuyển khoản học phí, chụp lại màn hình giao dịch và gửi để xác nhận nhập học.</p>
+      </div>
+    </div>
+    <div class="step-note">👉 Mọi thủ tục rườm rà còn lại, văn phòng sẽ lo hết cho anh/chị!</div>
+  </div>
+</section>
+
+<!-- ĐỊA ĐIỂM -->
+<section class="alt-bg" id="dia-diem">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">ĐỊA ĐIỂM ĐÀO TẠO</span>
+      <h2 class="h2-compact">Cơ sở đào tạo lái xe tại Vĩnh Phúc</h2>
+    </div>
+    <div class="loc-grid">
+      <div class="loc-card">
+        <span class="badge">CƠ SỞ 1</span>
+        <h3>Trung Tâm Hùng Vương</h3>
+        <p>Đạo Đức, Bình Xuyên, Vĩnh Phúc</p>
+      </div>
+      <div class="loc-card">
+        <span class="badge">CƠ SỞ 2</span>
+        <h3>Trung Tâm Âu Cơ</h3>
+        <p>Kim Long, Tam Dương, Vĩnh Phúc</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HÌNH ẢNH -->
+<section id="hinh-anh">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">HÌNH ẢNH THỰC TẾ</span>
+      <h2>Xe tập lái, sân sát hạch và <span class="nowrap-phrase">đội ngũ giảng dạy</span></h2>
+    </div>
+    <div class="team-row">
+      <div class="gallery-item team-item">
+        <img src="2aOboQijw4SVfRZtD4xzZurZbBaUjQtNgw94H1ai.jpg" alt="Thầy Nguyễn Văn Thụy - giáo viên dạy lái xe Vĩnh Phúc">
+        <span class="gallery-name">Thầy Nguyễn Văn Thụy<br><small>Tư vấn chuyên môn &amp; dạy lái</small></span>
+      </div>
+      <div class="gallery-item team-item">
+        <img src="2aOboQidR0zl9JgvwjOzevzGRPSWjt02ao0PN9hQ.jpg" alt="Nguyễn Nhật Bảo Khôi - phụ trách hồ sơ học lái xe Vĩnh Phúc">
+        <span class="gallery-name">Nguyễn Nhật Bảo Khôi<br><small>Phụ trách hồ sơ &amp; nhập học</small></span>
+      </div>
+    </div>
+
+    <div class="gallery-row">
+      <div class="gallery-item"><img src="708345716_1534663821472766_7735529216957334704_n.jpg" alt="Sân sát hạch lái xe ô tô Vĩnh Phúc"></div>
+      <div class="gallery-item"><img src="2aOboQijx8GBic0twtha3OdBHLatj5UwOOxB85my.jpg" alt="Xe tập lái xếp hàng tại bãi tập Vĩnh Phúc"></div>
+      <div class="gallery-item"><img src="2aoboqik1tfoeazh61f6mjc4z9sw1y8qod9uv1jw3.jpg" alt="Thực hành lái xe ban đêm cùng Trung tâm Vĩnh Phúc"></div>
+    </div>
+
+    <div class="video-row">
+      <div class="video-frame">
+        <video controls preload="metadata" playsinline>
+          <source src="san-tap-lai-xe.mp4" type="video/mp4">
+          Trình duyệt của bạn không hỗ trợ video.
+        </video>
+      </div>
+      <p class="video-caption">🎥 Video thực tế sân tập lái xe ô tô Vĩnh Phúc</p>
+    </div>
+  </div>
+</section>
+
+<!-- LIÊN HỆ -->
+<section class="alt-bg" id="lien-he">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">LIÊN HỆ</span>
+      <h2>Liên hệ tiếp nhận hồ sơ và tư vấn khóa học</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="role">Phụ trách hồ sơ &amp; nhập học</div>
+        <h3>Nguyễn Nhật Bảo Khôi</h3>
+        <div class="phone-line">📞 <a href="tel:0987453423">0987 453 423</a></div>
+        <div class="phone-line">📞 <a href="tel:0812610265">0812 610 265</a></div>
+      </div>
+      <div class="contact-card light">
+        <div class="role">Tư vấn chuyên môn &amp; dạy lái</div>
+        <h3>Thầy Thụy</h3>
+        <div class="phone-line">📞 <a href="tel:0912599550">0912 599 550</a></div>
+        <p style="color:var(--gray); font-size:.9rem; margin-top:6px;">Nhắn tin Zalo hoặc gọi trực tiếp để được tư vấn khóa học phù hợp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="road-divider"></div>
+<footer>
+  <div class="wrap footer-inner">
+    <p>© 2026 Điểm Tiếp Nhận Hồ Sơ - Trung Tâm Đào Tạo Lái Xe Vĩnh Phúc.</p>
+    <p>Học lái xe Vĩnh Phúc · Học lái xe Phú Thọ · Dạy lái xe uy tín</p>
+  </div>
+</footer>
+
+<div class="mobile-call-bar">
+  <a class="btn btn-solid" href="tel:0987453423">📞 Gọi Bảo Khôi</a>
+  <a class="btn btn-ghost" href="tel:0912599550">📞 Gọi Thầy Thụy</a>
+</div>
+
+</body>
+</html>
